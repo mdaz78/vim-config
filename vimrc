@@ -51,7 +51,7 @@ set shiftwidth=2
 
 "---------------------Visuals-------------------------"
 " change font 
-set guifont=Operator\ Mono\ Lig:h15
+set guifont=Operator\ Mono\ Lig:h16
 
 " colorschemes and statusline
 colorscheme one
@@ -67,6 +67,8 @@ set guioptions-=L
 set guioptions-=r
 set guioptions-=R
 
+" encoding
+set encoding=UTF-8
 
 "---------------------Searching-------------------------"
 set hlsearch
@@ -92,7 +94,7 @@ let NERDTreeHijackNetrw=0
 " /
 " / CtrlP
 " /
-let g:ctrlp_custom_ignore = 'node_modules\DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\'
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:20,results:20'
 
 
@@ -115,7 +117,8 @@ nmap <Leader>q :q<cr>
 nmap <Leader>, :nohlsearch<cr>
 
 " Make NERDTreetoggle
-nmap <Leader>nr :NERDTreeToggle<cr>
+nmap <Leader>nt :NERDTreeToggle<cr>
+nmap <Leader>nf :NERDTreeFind<cr>
 
 " delete a buffer
 nmap <Leader>bd :bd<cr>
@@ -138,3 +141,23 @@ nmap <c-R> :CtrlPMRUFiles<cr>
 " Go to definition and get back from it
 nmap <Leader>] <c-]>
 nmap <Leader>t <c-T>
+
+" set working directory to the current file
+" autocmd BufEnter * lcd %:p:h
+
+
+" Tab completions for emmet
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+
+"---------------------PEP8 indetation-------------------------"
+" au BufNewFile,BufRead *.py
+"     set tabstop=4
+"     set softtabstop=4
+"     set shiftwidth=4
+"     set textwidth=79
+"     set expandtab
+"     set autoindent
+"     set fileformat=unix
+" autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab autoindent
+
