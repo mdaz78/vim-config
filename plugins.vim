@@ -31,8 +31,14 @@ Plugin 'tpope/vim-surround'
 " vim commentary
 Plugin 'tpope/vim-commentary'
 
+" vim fugitive
+Plugin 'tpope/vim-fugitive'
+
 " vim polyglot
 Plugin 'sheerun/vim-polyglot'
+
+" emmet
+Plugin 'mattn/emmet-vim'
 
 " endwise
 Plugin 'tpope/vim-endwise'
