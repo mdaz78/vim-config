@@ -101,7 +101,7 @@ let g:ctrlp_match_window = 'top,order:ttb,min:1,max:20,results:20'
 " /
 " / ctags
 " /
-set tags=tags
+set tags=./tags;
 
 "---------------------Mappings-------------------------"
 " Make .vimrc open with <leader>ev
@@ -142,12 +142,28 @@ nmap <c-R> :CtrlPMRUFiles<cr>
 nmap <Leader>] <c-]>
 nmap <Leader>t <c-T>
 
+" git related shortcuts
+" Check git status
+nmap <Leader>gs :Gstatus<cr>
+
+" Commit
+nmap <Leader>gc :Gcommit<cr>
+
+
+
 " set working directory to the current file
 " autocmd BufEnter * lcd %:p:h
 
 
 " Tab completions for emmet
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+"-----------------Disable syntastic for python------------"
+let g:syntastic_mode_map = { 'passive_filetypes': ['python'] }
+
+
+"----------------Using python3----------------"
+let g:pymode_python = 'python3'
 
 
 "---------------------PEP8 indetation-------------------------"
