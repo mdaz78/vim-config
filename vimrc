@@ -145,9 +145,10 @@ nmap <Leader>t <c-T>
 " git related shortcuts
 " Check git status
 nmap <Leader>gs :Gstatus<cr>
-
 " Commit
 nmap <Leader>gc :Gcommit<cr>
+" push
+nmap <Leader>gp :Gpush<cr>
 
 
 
